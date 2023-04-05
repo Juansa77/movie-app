@@ -1,0 +1,42 @@
+.favouriteContainer{
+    display: grid;
+grid-template-columns: repeat(2, 25vw);
+justify-content: center;
+justify-items: center;
+column-gap: 2vh;
+row-gap: 2vh;
+}
+
+.movieFavourite{
+    max-width: 100%;
+    border: 1px solid red;
+    border-radius:10px;
+    padding: 1vh;
+    overflow: hidden;
+}
+
+.movieFavourite>img{
+    max-height: 30vh;
+    min-height: 30vh;
+    overflow: hidden;
+}
+
+.movieFavourite>h1{
+    background-color: green;
+    padding-top: 1vh;
+    max-height: 8vh;
+    min-height: 8vh;
+    font-size: 3vh;
+}
+
+.movieFavourite>p{
+    background-color: red;
+    padding-top: 1vh;
+    max-height: min-content;
+    min-height: 20vh;
+    font-size: 1.4vh;
+    padding: 2vh;
+    text-align: left;
+    border-radius: 10px;
+}
+

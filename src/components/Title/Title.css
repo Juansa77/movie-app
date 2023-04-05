@@ -1,0 +1,19 @@
+.title>h1{
+    font-size: 9vh;
+    margin-bottom: -3vh;
+    min-height: 10vh;
+    max-height: 10vh;
+    min-width: 100%;
+    max-width: 100%;
+
+}
+
+.title{
+    min-height: 12vh;
+    max-height: 120vh; 
+    min-width: 100%;
+    max-width: 100%;
+
+    background-color: red;
+    margin-bottom: 2vh;
+}

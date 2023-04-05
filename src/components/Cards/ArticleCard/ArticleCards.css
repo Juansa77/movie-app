@@ -1,0 +1,26 @@
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: grid;
+
+    justify-content: center;
+    justify-items: center;
+    text-align: left;
+    border: 1px solid red;
+}
+
+.card>img{
+    width: 100%;
+    padding: 1vh;
+}
+
+.card >p{
+    padding: 1vh;
+}
+
+.card> h1{
+    padding: 1vh;
+}

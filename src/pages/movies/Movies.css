@@ -1,0 +1,14 @@
+.buttomContainer{
+    margin-bottom: 2vh;
+ display: flex;
+ min-width:100%;
+ justify-content: center;
+ gap:2vh;
+}
+
+.buttomContainer > button{
+
+    min-height: 2vh;
+    background-color: red;
+    color:white;
+}

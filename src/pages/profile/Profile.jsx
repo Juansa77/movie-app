@@ -16,26 +16,27 @@ const Profile = () => {
 */
   //Nos traemos USER del context para solicitar el array del localStorage
   const { user } = useContext(UserContext);
+  //seteamos la data, aquí vamos a meter los datos actualizados de los favoritos del LocalStorage
   const [data, setData] = useState([]);
 
-  //cuando se renderiza, solicitamos los datos del localStorage
+  //cuando se renderiza, solicitamos los datos del localStorage y lo metemos en data
   useEffect(() => {
     const miData = localStorage.getItem(`${user}-array`);
     if (miData) {
       setData(JSON.parse(miData));
     }
   }, []);
-  //handleDelete recibe la ID del checkbox a través del event, ya que hemos asociado la ID del input a la ID obtenida en el .map
+  //handleDelete recibe la ID del checkbox a través del event, ya que hemos asociado la ID del input a la ID obtenida en el .map, y elimina del array el objeto seleccionado
   const handleDelete = (event) => {
     //aquí obtenemos la id del checkbox concreto que se ha pulsado
     const index = event.target.id;
-    // le metemos el valor del Index, que lo obtenemos al hacer click del elemento y creamos un nuevo array haciendo un spread de data
+    // obtenemos una copia actualizada de data, hecha con spread
     const newData = [...data];
-    //eliminamos su posicion con splice y el valor del index
+    //En la copia actualizada, eliminamos la  posicion del elemento seleccionado con splice y el valor del index
     newData.splice(index, 1); // elimina 1 elemento del array en la posición indicada
-    //seteamos data al resultado
+    //Una vez eliminado el elemento, seteamos data al resultado
     setData(newData);
-    //le pasamos al local storage el nuevo resultado
+    //le pasamos al local storage el nuevo resultado, volvemos a crear el array con estos datos.
     localStorage.setItem(`${user}-array`, JSON.stringify(newData));
   };
 

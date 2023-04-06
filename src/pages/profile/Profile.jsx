@@ -14,6 +14,7 @@ const Profile = () => {
   const singleMovie = getMovies(singleMovieDirection);
   console.log(singleMovie);
 */
+  //Nos traemos USER del context para solicitar el array del localStorage
   const { user } = useContext(UserContext);
   const [data, setData] = useState([]);
 
@@ -24,8 +25,9 @@ const Profile = () => {
       setData(JSON.parse(miData));
     }
   }, []);
-  //handleDelete recibe la ID del evento, ya que hemos asociado la ID del input a la ID obtenida en el .map
+  //handleDelete recibe la ID del checkbox a través del event, ya que hemos asociado la ID del input a la ID obtenida en el .map
   const handleDelete = (event) => {
+    //aquí obtenemos la id del checkbox concreto que se ha pulsado
     const index = event.target.id;
     // le metemos el valor del Index, que lo obtenemos al hacer click del elemento y creamos un nuevo array haciendo un spread de data
     const newData = [...data];

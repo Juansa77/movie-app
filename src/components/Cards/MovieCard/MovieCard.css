@@ -8,27 +8,8 @@ row-gap: 2vh;
 
 }
 
-.movie{
-    max-width: 100%;
-    border: 1px solid red;
-    border-radius:10px;
-    padding: 1vh;
-    overflow: hidden;
-}
 
-.movieContainer > .movie > img{
-    max-height: 30vh;
-    min-height: 30vh;
-    overflow: hidden;
-}
 
-.movieContainer > .movie > h1{
-    background-color: red;
-    padding-top: 1vh;
-    max-height: 8vh;
-    min-height: 8vh;
-
-}
 
 .movieContainer > .movie > p{
    text-align: left;
@@ -64,6 +45,7 @@ row-gap: 2vh;
       overflow: hidden;
       justify-content: left;
       justify-items: left;
+  
   
     }
     

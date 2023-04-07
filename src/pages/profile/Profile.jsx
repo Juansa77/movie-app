@@ -4,6 +4,7 @@ import React from 'react';
 import { useContext, useEffect, useState } from 'react';
 
 import { UserContext } from '../../components/contexts/UserContext';
+import CardFavourite from '../../components/UI/CardFavourite';
 
 const Profile = () => {
   /* const singleMovieURL = import.meta.env.VITE_APP_SINGLEMOVIE;
@@ -46,16 +47,12 @@ const Profile = () => {
         {data.length > 0 ? (
           <div className="favouriteContainer">
             {data.map((movie, index) => (
-              <figure key={data.id} className="movieFavourite">
-                <h1>{movie.title}</h1>
-                <img
-                  src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.image}`}
-                  alt="movie.title"
-                />
-                <p>{movie.text}</p>
-                <input id={index} type="checkbox" onChange={handleDelete} />
-                <label htmlFor={index}>Remove from my list</label>
-              </figure>
+              <CardFavourite
+                movie={movie}
+                handleDelete={handleDelete}
+                key={movie.id}
+                index={index}
+              />
             ))}
           </div>
         ) : (

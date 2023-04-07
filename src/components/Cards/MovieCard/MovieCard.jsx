@@ -5,6 +5,7 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { createRef } from 'react';
 
 import { UserContext } from '../../contexts/UserContext';
+import Card from '../../UI/Card';
 
 const MovieCard = ({ data }) => {
   const movies = data.results;
@@ -54,32 +55,13 @@ const MovieCard = ({ data }) => {
   return (
     <div className="movieContainer">
       {data.length != 0 &&
-        movies.map((movie, index) => (
-          <div className="movie" key={index}>
-            <h1>{movie.title}</h1>
-            <img
-              src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`}
-              alt="movie.title"
-            />
-            <p>{movie.overview}</p>
-            <div className="inputContainer">
-              <input
-                id="heart"
-                type="checkbox"
-                ref={cardsRefs.current[index]}
-                onChange={(event) =>
-                  handleCheck(
-                    event,
-                    movie.id,
-                    movie.title,
-                    movie.overview,
-                    movie.poster_path,
-                  )
-                }
-              />
-              <label htmlFor="input">Add to my list</label>
-            </div>
-          </div>
+        movies.map((movie) => (
+          <Card
+            key={movie.id}
+            movie={movie}
+            handleCheck={handleCheck}
+            cardsRefs={cardsRefs}
+          />
         ))}
     </div>
   );

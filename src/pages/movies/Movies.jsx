@@ -4,6 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 
 import MovieCard from '../../components/Cards/MovieCard/MovieCard';
+import Button from '../../components/UI/Button';
 import getMovies from '../../services/getMovies';
 
 const Movies = () => {
@@ -22,8 +23,8 @@ const Movies = () => {
   return (
     <div>
       <div className="buttomContainer">
-        <button onClick={handlePreviousPage}>Página anterior</button>
-        <button onClick={handleNextPage}>Siguiente página</button>
+        <Button onClick={handlePreviousPage}>Previous</Button>
+        <Button onClick={handleNextPage}>Next</Button>
       </div>
       <MovieCard data={data} />
     </div>

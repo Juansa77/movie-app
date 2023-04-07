@@ -10,7 +10,7 @@
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" ",
     "lint": "npm run lint:format && npm run lint:fix ",
     "test": "vitest",
-"test:ui": "vitest --ui"
+    "test:ui": "vitest --ui"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -21,6 +21,7 @@
     "bulma": "^0.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {

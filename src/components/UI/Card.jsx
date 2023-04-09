@@ -30,44 +30,51 @@ const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 1rem;
-  width: 23rem;
-  min-height: 45rem;
-  max-height: 45rem;
+  min-width:23rem
+  max-width: 23rem;
+  min-height: min-content;
+  max-height: min-content;
   border-radius: 0.5rem;
 
   overflow: hidden;
-  -webkit-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
-  -moz-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
-  box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
+  -webkit-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
+  -moz-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
+  box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
+  @media (max-width: 768px) {
+    width: 27rem;
+  }
 `;
 
 const CardImage = styled.img`
   object-fit: cover;
-  width: 100%;
-  height: 30rem;
+  min-width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
 `;
 
 const CardTitle = styled.h1`
-  font-size: 2.2rem;
-  margin: 1rem;
   text-align: center;
   color: red;
   display: none;
 `;
 
 const CardDescription = styled.p`
-  font-size: 1-5rem;
+  font-size: 0.9rem;
 
-  font-family: 'Raleway-Bold';
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0.5rem 1rem;
-  min-height: 13vh;
-  max-height: 13vh;
+  min-height: 9rem;
+  max-height: min-content;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const CardInputContainer = styled.div`
@@ -75,9 +82,11 @@ const CardInputContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 90%;
+  max-height: min-content;
   margin-top: 1rem;
   border: 1px solid red;
-  font-family: 'Raleway-Bold';
+  margin-bottom:2vh;
+  
   -webkit-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
   -moz-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
   box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
@@ -91,9 +100,12 @@ const CardInput = styled.input`
 `;
 
 const CardLabel = styled.label`
-  font-size: 1rem;
+  font-size: 0.6vw;
   margin-left: 0.5rem;
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export default Card;

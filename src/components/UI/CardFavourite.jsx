@@ -34,9 +34,9 @@ const Card = styled.figure`
   border-radius: 0.5rem;
 
   overflow: hidden;
-  -webkit-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
-  -moz-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
-  box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
+  -webkit-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
+  -moz-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
+  box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
 `;
 
 const ImageWrapper = styled.div`
@@ -80,6 +80,7 @@ const Overview = styled.p`
   margin: 0 0 10px;
   font-size: 0.8rem;
   line-height: 1.4;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 `;
 
 const Checkbox = styled.input``;
@@ -88,13 +89,11 @@ const CardInputContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin-top: 1rem;
   border: 1px solid red;
   font-family: 'Raleway-Bold';
-  -webkit-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
-  -moz-box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
-  box-shadow: 10px 10px 5px -9px rgba(255, 84, 161, 1);
+
   background-color: red;
 `;
 

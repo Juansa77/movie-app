@@ -60,6 +60,7 @@ const NavBar = () => {
             .navigation ul li {
               list-style-type: none;
               max-width: 100%;
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             }
             @media (max-width: 767px) {
               .hamburger {
@@ -77,12 +78,14 @@ const NavBar = () => {
                 text-align: left;
                 padding: 5vh;
                 background-color: black;
+                background-color: white;
                 color: white;
                 z-index: 10;
                 height: 100vh;
                 width: 50vw;
                 margin-top: 50px;
                 position: fixed;
+                color: black;
               }
               .navigation ul li {
                 margin-top: 1vh;

@@ -26,6 +26,9 @@ const Movies = () => {
         <Button onClick={handlePreviousPage}>Previous</Button>
         <Button onClick={handleNextPage}>Next</Button>
       </div>
+      <div className="categoryWrapper">
+        <h1>All the movies</h1>
+      </div>
       <MovieCard data={data} />
     </div>
   );

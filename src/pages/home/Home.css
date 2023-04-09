@@ -1,0 +1,41 @@
+h3{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.userInput{
+    background-color: black;
+    color:white;
+    width: 25vh;
+    height: 3vh;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.buttonSubmit{
+
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.5vh;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e50914;
+  border-radius: 3px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 6vw;
+  max-width: 20vw;
+
+  z-index: 1;
+
+
+
+}
+
+.buttonSubmit:hover{
+    background-color: #b2070f;
+}
+
+.buttonSubmit:active{
+    background-color: #b2070f;
+    transform: translateY(1px);
+}

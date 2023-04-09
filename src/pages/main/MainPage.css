@@ -1,0 +1,12 @@
+h1{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1vw;
+   
+
+}
+.categoryWrapper{
+    text-align: left;
+    max-height: 1vw;
+    border-bottom: 1px solid red ;
+    margin-bottom: 2vh;
+}

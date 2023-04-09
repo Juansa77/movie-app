@@ -1,19 +1,28 @@
-.title>h1{
-    font-size: 9vh;
-    margin-bottom: -3vh;
-    min-height: 10vh;
-    max-height: 10vh;
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Raleway:ital,wght@0,400;0,600;0,700;1,400&family=Rampart+One&family=Tourney:wght@700&display=swap');
+
+
+
+
+.title{
+    min-height: 15vh;
+    max-height: 15vh; 
     min-width: 100%;
     max-width: 100%;
+
+
+    
+    margin-bottom: 20vh;
+
 
 }
 
-.title{
-    min-height: 12vh;
-    max-height: 120vh; 
-    min-width: 100%;
-    max-width: 100%;
-
-    background-color: red;
+.titleText{
+    font-family: 'Tourney', cursive;
+    color:red;
+    
+    font-size: 9vw;
     margin-bottom: 2vh;
+    border-bottom:4px solid red;
+    border-top:4px solid red;
+
 }

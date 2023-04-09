@@ -12,3 +12,14 @@
     background-color: red;
     color:white;
 }
+
+
+@media (max-width:790px) {
+    .categoryWrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3vh;
+    }
+    
+    
+}

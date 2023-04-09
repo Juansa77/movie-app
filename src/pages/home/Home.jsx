@@ -1,3 +1,5 @@
+import './Home.css';
+
 import React from 'react';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
@@ -25,6 +27,7 @@ const Home = () => {
         <form onSubmit={handleSubmit(onFormSubmit)}>
           <h3>Por favor, introduzca su nombre de usuario</h3>
           <input
+            className="userInput"
             type="text"
             {...register('username', {
               required: true, // Si no hay valor, no activará la función del login
@@ -37,7 +40,9 @@ const Home = () => {
             <p className="error">Campo obligatorio, debe tener al menos dos caracteres</p>
           ) : null}
           {/*Al pulsar en el botón, llama a la funcuión user para que meta en localStorage el valor del input*/}
-          <button type="submit">Ingresar</button>{' '}
+          <button className="buttonSubmit" type="submit">
+            Ingresar
+          </button>{' '}
         </form>
       ) : (
         <>

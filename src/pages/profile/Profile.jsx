@@ -44,6 +44,9 @@ const Profile = () => {
   return (
     <div>
       <React.Fragment>
+        <div className="categoryWrapper">
+          <h1>Your movies</h1>
+        </div>
         {data.length > 0 ? (
           <div className="favouriteContainer">
             {data.map((movie, index) => (

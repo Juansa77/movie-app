@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.5vh;
   font-weight: 600;
   color: #fff;
   background-color: #e50914;
@@ -11,7 +11,8 @@ const StyledButton = styled.button`
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 6vw;
+  min-width: 6vw;
+  max-width: 20vw;
 
   &:hover {
     background-color: #b2070f;

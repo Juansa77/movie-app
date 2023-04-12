@@ -10,11 +10,13 @@ import { UserContextProvider } from './components/contexts/UserContext';
 import NavBar from './components/NavBar/NavBar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Title from './components/Title/Title';
+import Detail from './pages/Detail/Detail';
 import Home from './pages/home/Home';
 import MainPage from './pages/main/MainPage';
 import Movies from './pages/movies/Movies';
 import News from './pages/news/News';
 import Profile from './pages/profile/Profile';
+import TopMovies from './pages/TopMovies/TopMovies';
 import GlobalStyles from './style/GlobalStyles';
 import { theme } from './style/theme';
 import { createTheme } from './style/utils';
@@ -43,6 +45,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 element={
                   <ProtectedRoute>
                     <Movies />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/movies/:movieID"
+                element={
+                  <ProtectedRoute>
+                    <Detail />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/topmovies"
+                element={
+                  <ProtectedRoute>
+                    <TopMovies />
                   </ProtectedRoute>
                 }
               />

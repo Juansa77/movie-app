@@ -1,0 +1,20 @@
+.similarMoviesContainer{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    row-gap: 2vh;
+    width: 100%;
+    text-align: center;
+}
+
+.similarMoviesContainer> h1{
+    grid-column:1/3;
+}
+@media (max-width:790px) {
+    .similarMoviesContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3vh;
+    }
+    
+    
+}

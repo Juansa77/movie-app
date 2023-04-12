@@ -1,15 +1,25 @@
-import './MovieCard.css';
+import './Detail.css';
 
 import React from 'react';
-import { useContext, useEffect, useRef, useState } from 'react';
-import { createRef } from 'react';
+import { createRef, useContext, useEffect, useRef, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { UserContext } from '../../contexts/UserContext';
-import Card from '../../UI/Card';
+import { UserContext } from '../../components/contexts/UserContext';
+import Card from '../../components/UI/Card';
+import getMovies from '../../services/getMovies';
 
-const MovieCard = ({ data }) => {
+const Detail = () => {
+  const { movieID } = useParams();
+  const movieApiUrl = import.meta.env.VITE_APP_SINGLEMOVIE;
+  const apiKEY = import.meta.env.VITE_APP_APIKEY;
+
+  //const movieDetail = `${movieApiUrl}/${movieID}?api_key=${apiKEY}`;
+  //const movieDetail = requestTop.find((element) => element.id === movieID);
+  const similarMovie = `${movieApiUrl}/${movieID}/similar?api_key=${apiKEY}`;
+
+  const data = getMovies(similarMovie);
   const movies = data.results;
-  //Nos traemos user del UserContext para nombrar el array de LocalStorage
+
   const { user } = useContext(UserContext);
 
   //Creamos movielist y lo seteamos. Aquí tendremos la lista de los favoritos del usuario
@@ -55,18 +65,21 @@ const MovieCard = ({ data }) => {
 
   console.log(movies);
   return (
-    <div className="movieContainer">
-      {data.length != 0 &&
-        movies.map((movie) => (
+    <div className="similarMoviesContainer">
+      {data.results && data.results.length > 0 ? (
+        data.results.map((movie) => (
           <Card
             key={movie.id}
             movie={movie}
             handleCheck={handleCheck}
             cardsRefs={cardsRefs}
           />
-        ))}
+        ))
+      ) : (
+        <h1>No recommendations available</h1>
+      )}
     </div>
   );
 };
 
-export default MovieCard;
+export default Detail;

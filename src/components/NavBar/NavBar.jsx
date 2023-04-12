@@ -29,6 +29,9 @@ const NavBar = () => {
             <NavLink to="/movies">
               <li>Movies</li>
             </NavLink>
+            <NavLink to="/topmovies">
+              <li>Top Movies</li>
+            </NavLink>
             <NavLink to="/news">
               <li>News</li>
             </NavLink>
@@ -69,6 +72,7 @@ const NavBar = () => {
                 padding-top: 10px;
                 width: 5vw;
                 padding-left: 3vw;
+                margin-right: 3vw;
 
                 z-index: 6;
               }

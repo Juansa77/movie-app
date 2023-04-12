@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Card = ({ movie, index, handleCheck, cardsRefs }) => {
   return (
     <CardContainer>
-      <CardImage
-        src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`}
-        alt={movie.title}
-      />
-      <CardTitle>{movie.title}</CardTitle>
-      <CardDescription>{movie.overview}</CardDescription>
+      <Link key={index} to={`/movies/${movie.id}`}>
+        <CardImage
+          src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`}
+          alt={movie.title}
+        />
+        <CardTitle>{movie.title}</CardTitle>
+        <CardDescription>{movie.overview}</CardDescription>
+      </Link>
       <CardInputContainer>
         <CardInput
           id={`heart-${index}`}
@@ -37,9 +40,9 @@ const CardContainer = styled.div`
   border-radius: 0.5rem;
 
   overflow: hidden;
-  -webkit-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
-  -moz-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
-  box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
+  -webkit-box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
+  -moz-box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
+  box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
   @media (max-width: 768px) {
     width: 27rem;
   }

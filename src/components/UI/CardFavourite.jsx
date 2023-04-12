@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const CardFavourite = ({ movie, index, handleDelete }) => {
   return (
     <Card key={movie.id}>
-      <ImageWrapper>
-        <Image
-          src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.image}`}
-          alt={movie.title}
-        />
-      </ImageWrapper>
+      <Link key={index} to={`/movies/${movie.id}`}>
+        <ImageWrapper>
+          <Image
+            src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.image}`}
+            alt={movie.title}
+          />
+        </ImageWrapper>
+      </Link>
       <Content>
         <Title>{movie.title}</Title>
         <Overview>{movie.text}</Overview>
@@ -28,15 +31,15 @@ const Card = styled.figure`
   flex-direction: column;
   align-items: center;
   margin: 1rem;
-  width: 35rem;
-  min-height: 50rem;
-  max-height: 50rem;
+  width: 95%;
+  min-height: 25vh;
+  max-height: min-content;
   border-radius: 0.5rem;
 
   overflow: hidden;
-  -webkit-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
-  -moz-box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
-  box-shadow: 10px 10px 32px -4px rgba(245, 8, 39, 1);
+  -webkit-box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
+  -moz-box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
+  box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
 `;
 
 const ImageWrapper = styled.div`

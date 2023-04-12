@@ -7,7 +7,7 @@ import InitialGallery from '../../components/Gallery/InitialGallery';
 import RandomNew from '../../components/RandomNew/RandomNew';
 
 const MainPage = () => {
-  const [requestNews] = useOutletContext();
+  const { requestNews } = useOutletContext();
 
   return (
     <React.Fragment>

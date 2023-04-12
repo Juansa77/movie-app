@@ -4,14 +4,17 @@
 
 
 .title{
-    min-height: 15vh;
-    max-height: 15vh; 
+    min-height: 25vh;
+    max-height: 25vh; 
     min-width: 100%;
     max-width: 100%;
 
-
+display: grid;
     
-    margin-bottom: 20vh;
+    margin-bottom: 2vh;
+
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .25);
 
 
 }
@@ -19,10 +22,18 @@
 .titleText{
     font-family: 'Tourney', cursive;
     color:red;
+
     
-    font-size: 9vw;
+    font-size: 6vw;
     margin-bottom: 2vh;
     border-bottom:4px solid red;
     border-top:4px solid red;
+
+}
+
+@media(max-width: 768px){
+.titleText{
+    font-size: 9vh;
+}
 
 }

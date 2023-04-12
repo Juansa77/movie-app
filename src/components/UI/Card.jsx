@@ -40,12 +40,20 @@ const CardContainer = styled.div`
   border-radius: 0.5rem;
 
   overflow: hidden;
-  -webkit-box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
-  -moz-box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
-  box-shadow: 10px 10px 22px -4px rgba(245, 8, 39, 1);
+  -webkit-box-shadow: 4px 1px 1px -4px rgba(245, 1, 19, 1);
+  -moz-box-shadow: 4px 1px 1px -4px rgba(245, 1, 19, 1);
+  box-shadow: 4px 1px 12px -4px rgba(245, 1, 19, 1);
+  transition:  all 0.2s ease-in-out;
   @media (max-width: 768px) {
     width: 27rem;
+
   }
+
+  &:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 10px 10px 22px -4px rgba(245, 50, 39, 1);
+  -moz-box-shadow: 10px 10px 22px -4px rgba(245, 50, 39, 1);
+  box-shadow: 10px 10px 22px -4px rgba(245, 50, 39, 1);
 `;
 
 const CardImage = styled.img`

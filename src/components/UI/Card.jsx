@@ -50,7 +50,7 @@ const CardContainer = styled.div`
   }
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
     -webkit-box-shadow: 10px 10px 22px -4px rgba(245, 50, 39, 1);
   -moz-box-shadow: 10px 10px 22px -4px rgba(245, 50, 39, 1);
   box-shadow: 10px 10px 22px -4px rgba(245, 50, 39, 1);

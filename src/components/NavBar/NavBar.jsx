@@ -92,7 +92,7 @@ const NavBar = () => {
                 color: black;
               }
               .navigation ul li {
-                margin-top: 1vh;
+                margin-top: 3vh;
               }
               .navigation ul li:hover {
                 background-color: white;
